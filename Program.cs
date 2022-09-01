@@ -1,16 +1,19 @@
-﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-// 3, 5 -> 243 (3⁵)
-// 2, 4 -> 16
+﻿// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
 
 void sqr()
-    {   
+{
     Console.Write("Введите число: ");
-    int A = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите степень числа: ");
-    int B = Convert.ToInt32(Console.ReadLine());
-    int temp = A;
-    for (int i = 1; i < B; i++) temp = temp*A;
-    Console.WriteLine(temp); 
+    int num = Convert.ToInt32(Console.ReadLine());
+    int sum = 0;
+    while(num!=0)
+    {
+        sum = sum + num % 10;
+        num = num / 10;
+    }
+    Console.WriteLine($"Сумма чисел равна: {sum}");
     }
 
 sqr();
